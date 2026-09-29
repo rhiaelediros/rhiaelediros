@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Static Website</title>
+
+    <style>
+        /* =========================
+           GENERAL STYLES
+        ========================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           NAVIGATION BAR
+        ========================= */
+        nav {
+            background-color: #1e3a5f;
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #8fd694;
+        }
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e3a5f, #3c6e91);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #8fd694;
+            color: #17324d;
+            padding: 12px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: #b2e5b5;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================= */
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #1e3a5f;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+        .services {
+            background-color: white;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: #f5f7fa;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+        .contact {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+    <nav>
+        <div class="logo">MyWebsite</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- =========================
+         HOME / HERO
+    ========================= -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to My vlog</h1>
+
+            <p>
+                A simple static website created using
+                HTML, CSS, and JavaScript.
+            </p>
+
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================= -->
+    <section id="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+        </div>
+
+        <div class="about">
+            <p>
+                This is a sample static website that demonstrates
+                how HTML, CSS, and JavaScript can work together
+                inside a single HTML file.
+            </p>
+
+            <br>
+
+            <p>
+                HTML provides the structure, CSS handles the
+                appearance, and JavaScript adds interactivity.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         SERVICES SECTION
+    ========================= -->
+    <section class="services" id="services">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="card-container">
+
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Web Design</h3>
+                <p>
+                    Creating clean and responsive website designs.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>UI Design</h3>
+                <p>
+                    Designing simple and user-friendly interfaces.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Web Development</h3>
+                <p>
+                    Building functional websites using modern
+                    web technologies.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================= -->
+    <section id="contact">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+        </div>
+
+        <div class="contact">
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+    <footer>
+        <p>&copy; 2026 MyWebsite. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+    <script>
+
+        // Contact form
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                // Prevent page refresh
+                event.preventDefault();
+
+                // Get the user's name
+                const name =
+                    document.getElementById("name").value;
+
+                // Show a message
+                alert(
+                    "Thank you, " + name +
+                    "! Your message has been received."
+                );
+
+                // Clear the form
+                this.reset();
+            });
+
+    </script>
+
+</body>
+</html>
+```
